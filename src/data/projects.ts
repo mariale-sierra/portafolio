@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: "financial-options",
     title: "Análisis de Opciones Financieras",
-    category: "Analítica de Datos",
+    category: "Análisis de datos",
     summary:
       "Canal de análisis completo sobre un gran conjunto de datos de opciones financieras, presentado mediante un dashboard interactivo de BI.",
     highlights: [

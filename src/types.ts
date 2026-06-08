@@ -1,7 +1,7 @@
 export type ProjectCategory =
-  | "Data Analytics"
+  | "Análisis de datos"
   | "Backend"
-  | "AI / Machine Learning"
+  | "IA / Machine Learning"
 
 export interface Project {
   id: string
