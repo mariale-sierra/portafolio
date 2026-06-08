@@ -19,18 +19,18 @@ export default function Skills() {
       <section className="relative mb-10 overflow-hidden rounded-[2rem] soft-panel px-6 py-8 sm:px-8 sm:py-10">
         <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full hero-orb blur-2xl" />
         <SectionHeader
-          eyebrow="Skills"
-          title="Skills Analytics"
-          description="A dashboard-style summary of programming, backend, database, and data competencies."
+          eyebrow="Habilidades"
+          title="Resumen de habilidades"
+          description="Resumen estilo dashboard de competencias en programación, backend, bases de datos y análisis de datos."
           className="mb-0"
         />
       </section>
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-        <Panel title="Focus Areas" className="xl:col-span-2">
+        <Panel title="Áreas de enfoque" className="xl:col-span-2">
           <FocusAreaChart data={focusAreas} />
         </Panel>
-        <Panel title="Radar View" variant="minimal">
+        <Panel title="Vista radar" variant="minimal">
           <FocusRadarChart data={focusAreas} />
         </Panel>
       </div>

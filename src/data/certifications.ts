@@ -3,26 +3,26 @@ import type { Certification } from "@/types"
 export const certifications: Certification[] = [
   {
     id: "google-ada",
-    title: "Google Advanced Data Analytics Certificate",
+    title: "Certificado Avanzado en Análisis de Datos",
     institution: "Google · Coursera",
-    year: "2024",
+    year: "2025",
     description:
-      "Advanced analytics workflows, statistical methods, regression, machine learning foundations, and data storytelling for business decisions.",
+      "Flujos avanzados de análisis, métodos estadísticos, regresión, fundamentos de machine learning y narración de datos para decisiones de negocio.",
   },
   {
     id: "bigdata-bi",
-    title: "Big Data and Business Intelligence Diploma",
-    institution: "Professional Diploma Program",
-    year: "2023",
+    title: "Diplomado en Big Data y Business Intelligence",
+    institution: "EAE Business School (Programa Profesional)",
+    year: "2025",
     description:
-      "Data warehousing, ETL pipelines, dashboarding, and business intelligence reporting for operational decision-making.",
+      "Almacenamiento de datos, pipelines ETL, creación de dashboards e informes de BI para la toma de decisiones operativas.",
   },
   {
     id: "java-cert",
-    title: "Java Certification",
-    institution: "Certified Program",
-    year: "2023",
+    title: "Certificación en Java",
+    institution: "INTECAP / Programa Certificado",
+    year: "2024",
     description:
-      "Object-oriented programming, data structures, and building maintainable backend applications in Java.",
+      "Fundamentos de programación orientada a objetos, estructuras de datos y desarrollo de aplicaciones backend mantenibles en Java.",
   },
 ]

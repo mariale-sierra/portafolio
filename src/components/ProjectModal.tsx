@@ -50,7 +50,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
             type="button"
             onClick={onClose}
             className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-border text-muted-foreground hover:text-foreground"
-            aria-label="Close dialog"
+            aria-label="Cerrar diálogo"
           >
             <X className="h-4 w-4" />
           </button>
@@ -65,7 +65,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           <p className="mt-1 text-2xl font-semibold text-foreground">{project.metric.value}</p>
         </div>
 
-        <h3 className="mt-5 text-sm font-semibold text-foreground">Highlights</h3>
+        <h3 className="mt-5 text-sm font-semibold text-foreground">Puntos destacados</h3>
         <ul className="mt-2 space-y-2">
           {project.highlights.map((h) => (
             <li key={h} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -75,7 +75,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           ))}
         </ul>
 
-        <h3 className="mt-5 text-sm font-semibold text-foreground">Tech stack</h3>
+        <h3 className="mt-5 text-sm font-semibold text-foreground">Tecnologías</h3>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {project.stack.map((tech) => (
             <span
@@ -94,7 +94,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[linear-gradient(135deg,var(--color-primary),var(--color-accent))] px-4 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
         >
           <ExternalLink className="h-4 w-4" />
-          View on GitHub
+          Ver en GitHub
         </a>
       </div>
     </div>

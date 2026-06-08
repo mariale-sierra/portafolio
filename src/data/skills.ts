@@ -2,7 +2,7 @@ import type { SkillCategory, FocusArea } from "@/types"
 
 export const skillCategories: SkillCategory[] = [
   {
-    category: "Programming Languages",
+    category: "Lenguajes de programación",
     skills: [
       { name: "Python", level: 92 },
       { name: "Java", level: 88 },
@@ -20,7 +20,7 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    category: "Databases",
+    category: "Bases de datos",
     skills: [
       { name: "PostgreSQL", level: 88 },
       { name: "MySQL", level: 84 },
@@ -28,16 +28,16 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    category: "Data & BI",
+    category: "Datos y BI",
     skills: [
       { name: "Power BI", level: 90 },
       { name: "Data Analysis", level: 88 },
       { name: "Statistical Analysis", level: 82 },
-      { name: "Data Visualization", level: 86 },
+      { name: "Visualización de datos", level: 86 },
     ],
   },
   {
-    category: "Tools",
+    category: "Herramientas",
     skills: [
       { name: "Docker", level: 80 },
       { name: "Git", level: 90 },
@@ -50,9 +50,9 @@ export const skillCategories: SkillCategory[] = [
 ]
 
 export const focusAreas: FocusArea[] = [
-  { area: "Backend Development", value: 85 },
-  { area: "Data Analytics", value: 92 },
-  { area: "Databases", value: 88 },
-  { area: "Web Development", value: 75 },
-  { area: "Business Intelligence", value: 87 },
+  { area: "Desarrollo Backend", value: 85 },
+  { area: "Analítica de Datos", value: 92 },
+  { area: "Bases de datos", value: 88 },
+  { area: "Desarrollo Web", value: 75 },
+  { area: "Inteligencia de negocio", value: 87 },
 ]

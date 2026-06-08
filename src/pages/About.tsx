@@ -11,149 +11,118 @@ import {
   HandHeart,
 } from "lucide-react"
 import { SectionHeader } from "@/components/SectionHeader"
+import { useEffect, useState } from "react"
 
 const profileCards = [
   {
     icon: GraduationCap,
-    title: "Computer Science Student",
-    desc: "Building strong foundations in algorithms, systems, and software engineering.",
+    title: "Estudiante de Ciencias de la Computación",
+    desc: "Fundamentos en algoritmos, sistemas y desarrollo de software.",
   },
   {
     icon: Server,
-    title: "Backend Development",
-    desc: "Designing APIs, services, and maintainable server-side architecture.",
+    title: "Desarrollo Backend",
+    desc: "Diseño de APIs y arquitecturas server-side mantenibles.",
   },
   {
     icon: BarChart3,
-    title: "Data Analytics",
-    desc: "Turning raw data into insights through statistical analysis.",
+    title: "Analítica de Datos",
+    desc: "Transformar datos crudos en insights mediante análisis estadístico.",
   },
   {
     icon: PieChart,
     title: "Business Intelligence",
-    desc: "Dashboards and reporting that support operational decisions.",
+    desc: "Dashboards y reportes para apoyar la toma de decisiones.",
   },
   {
     icon: Database,
-    title: "Databases",
-    desc: "Relational and graph data models with a focus on integrity.",
+    title: "Bases de Datos",
+    desc: "Modelado relacional y grafos con foco en integridad.",
   },
   {
     icon: Network,
-    title: "Information Systems",
-    desc: "Connecting technology, data, and processes to deliver impact.",
+    title: "Sistemas de Información",
+    desc: "Conectar tecnología, datos y procesos para generar impacto.",
   },
 ]
 
 const stats = [
-  { label: "Field", value: "Computer Science" },
-  { label: "Focus", value: "Backend & Data" },
-  { label: "Location", value: "Guatemala" },
-  { label: "Status", value: "Open to roles" },
+  { label: "Campo", value: "Ingeniería en Ciencias de la Computación" },
+  { label: "Enfoque", value: "Backend y Datos" },
+  { label: "Ubicación", value: "Guatemala" },
+  { label: "Estado", value: "Abierta a oportunidades" },
 ]
 
 const interests = [
   {
     icon: Clapperboard,
-    title: "Movies and series",
-    desc: "I enjoy stories, cinematography, and how narratives are built.",
+    title: "Cine",
+    desc: "Películas: romcoms, thrillers psicológicos y películas existencialistas.",
   },
   {
     icon: BookOpen,
-    title: "Reading",
-    desc: "It helps me learn new ideas and see problems from different angles.",
+    title: "Lectura",
+    desc: "Leer sobre diseño, UX y narrativas de datos.",
   },
   {
     icon: Dumbbell,
-    title: "Gym",
-    desc: "A routine that keeps me disciplined and recharged.",
+    title: "Pintura",
+    desc: "Pinto cuadros; puedo compartir fotos de mis obras.",
   },
   {
     icon: HandHeart,
-    title: "Volunteering",
-    desc: "I like participating in community efforts and helping where I can.",
+    title: "Cocinar y dormir",
+    desc: "Cocinar nuevas recetas y descansar (muy importante).",
   },
 ]
 
 export default function About() {
+  const [imgs, setImgs] = useState(["/art/painting1.jpg", "/art/painting2.jpg", "/art/painting3.jpg"])
+
+  const handleError = (index: number) => {
+    setImgs((prev) => {
+      const copy = [...prev]
+      copy[index] = `/art/painting${index + 1}.svg`
+      return copy
+    })
+  }
+
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <section className="relative mb-10 overflow-hidden rounded-[2rem] soft-panel px-6 py-8 sm:px-8 sm:py-10">
-        <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full hero-orb blur-2xl" />
-        <div className="pointer-events-none absolute -left-10 bottom-0 h-32 w-64 rounded-full hero-wave blur-2xl" />
-        <SectionHeader
-          eyebrow="About"
-          title="System Profile"
-          description="A professional overview of background, focus areas, and the disciplines that shape how I approach technology problems."
-          className="mb-0"
-        />
-      </section>
+      <section className="mb-8 px-2">
+        <SectionHeader eyebrow="Sobre mí" title="Hola, soy Ale" description="Un espacio más relajado sobre quién soy, qué me gusta y por qué hago lo que hago." />
 
-      {/* Summary panel */}
-      <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
-        <div className="soft-panel rounded-[1.75rem] p-6 lg:col-span-2">
-          <h2 className="text-sm font-semibold text-[color:var(--color-accent)]">Professional Summary</h2>
-          <p className="mt-3 leading-relaxed text-muted-foreground">
-            I am a Computer Science student focused on backend engineering and data analytics. I enjoy
-            building reliable systems, modeling data, and transforming information into measurable
-            insight. My work spans API and database design, statistical analysis, and business
-            intelligence dashboards — always with an emphasis on clarity, quality, and impact.
-          </p>
-          <p className="mt-3 leading-relaxed text-muted-foreground">
-            I value structured problem solving and clean, maintainable solutions, whether that means
-            cleaning a 400,000-row dataset, designing a recommendation engine, or supporting students
-            as a teaching assistant.
-          </p>
-        </div>
+        <div className="mt-6 about-casual">
+          <div className="flex flex-col items-center">
+            <img src="/profile.jpg" alt="Foto de perfil" className="photo" />
+            <div className="mt-4 sticker">Estudiante · Analista junior</div>
+          </div>
 
-        <div className="soft-panel rounded-[1.75rem] p-6">
-          <h2 className="text-sm font-semibold text-[color:var(--color-accent)]">At a glance</h2>
-          <dl className="mt-4 space-y-3">
-            {stats.map((s) => (
-              <div key={s.label} className="flex items-center justify-between pb-3 last:pb-0">
-                <dt className="text-sm text-muted-foreground">{s.label}</dt>
-                <dd className="text-sm font-medium text-foreground">{s.value}</dd>
+          <div>
+            <h3 className="text-lg font-semibold text-[color:var(--color-primary)]">Un poco sobre mí</h3>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Me llamo María Alejandra Sierra Cabrera, me gusta que me digan Ale, y estudio Ciencias de la Computación en UVG. Me encanta armar cosas que funcionen: desde APIs y dashboards que expliquen qué está pasando en números. Pero lo que más disfruto es cuando una visualización hace que alguien diga "ahhh, ahora lo entiendo". Como alguien que aprende de forma visual, siempre me gustó tener esa referencia al intentar entender un sistema o un dataset, me motiva no solo hacer sistemas funcionales, sino que también sean accesibles y entendibles por todos</p>
+
+            <h4 className="mt-6 text-sm font-semibold text-[color:var(--color-accent)]">Intereses</h4>
+            <div className="mt-2 text-sm text-muted-foreground space-y-2">
+              <p>Me gusta ver películas — mi favorita es <em>Inglorious Basterds</em> de Tarantino. Odio las películas de miedo, pero disfruto mucho las de suspenso como <em>American Phsyco</em>. También me encantan las romcoms como <em>10 things I hate about you</em> y las películas existencialistas como <em>Eternal sunshine of the spotless mind</em>; además soy fan de los thrillers psicológicos como <em>Get Out</em>.</p>
+              <p>No me gustan las series porque no me gusta quedarme con la historia a medias.</p>
+              <p>Me gusta pintar, me gusta usar acrílico y acuarela, me gusta la textura y las texturas que se pueden hacer con óleo pero no me gusta cuánto se tarda en secar. Me gusta el surrealismo y me encanta pintar cosas como ojos y cuadros con variedad de colores</p>
+            </div>
+
+            <div className="mt-4">
+              <h5 className="text-sm font-semibold text-[color:var(--color-primary)]">Galería de cuadros</h5>
+              <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                {imgs.map((src, i) => (
+                  <figure key={src} className="rounded-md overflow-hidden border border-[color:var(--color-border)] bg-white/90">
+                    <img src={src} alt={`Cuadro ${i + 1}`} className="w-full h-auto max-h-72 object-contain bg-[color:var(--color-card)] p-2" onError={() => handleError(i)} />
+                    <figcaption className="p-2 text-xs text-muted-foreground text-center">Cuadro {i + 1}</figcaption>
+                  </figure>
+                ))}
               </div>
-            ))}
-          </dl>
-        </div>
-      </div>
-
-      {/* Profile cards */}
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {profileCards.map((card) => (
-          <div key={card.title} className="accent-rail flex gap-4 items-start rounded-[1.5rem] bg-white/55 p-5">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[color:var(--color-pink-1)]/14 text-[color:var(--color-accent)]">
-              <card.icon className="h-5 w-5" aria-hidden="true" />
-            </span>
-            <div>
-              <h3 className="text-base font-semibold text-foreground">{card.title}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{card.desc}</p>
             </div>
           </div>
-        ))}
-      </div>
-
-      <div className="mt-8 soft-panel rounded-[1.75rem] p-6">
-        <h2 className="text-sm font-semibold text-[color:var(--color-accent)]">Personal Interests</h2>
-        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-          Outside of academics and tech, I like keeping a balanced routine with things that recharge
-          me and give me new ideas.
-        </p>
-        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {interests.map((interest) => (
-            <div key={interest.title} className="flex gap-3 items-start rounded-2xl bg-white/55 p-4">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[color:var(--color-pink-2)]/12 text-[color:var(--color-accent)]">
-                <interest.icon className="h-4 w-4" aria-hidden="true" />
-              </span>
-              <div>
-                <h3 className="text-sm font-semibold text-foreground">{interest.title}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{interest.desc}</p>
-              </div>
-            </div>
-          ))}
         </div>
-      </div>
+      </section>
     </div>
   )
 }

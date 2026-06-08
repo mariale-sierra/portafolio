@@ -13,7 +13,6 @@ interface ProjectCardProps {
   onSelect: (project: Project) => void
 }
 
-/* Clickable project card — opens a details modal via onSelect. */
 export function ProjectCard({ project, onSelect }: ProjectCardProps) {
   return (
     <button

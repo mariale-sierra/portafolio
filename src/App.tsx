@@ -8,7 +8,6 @@ import Experience from "@/pages/Experience"
 import Projects from "@/pages/Projects"
 import Skills from "@/pages/Skills"
 
-/* Scrolls to top on every route change. */
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {

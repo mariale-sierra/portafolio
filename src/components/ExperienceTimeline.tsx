@@ -1,7 +1,6 @@
 import { Briefcase } from "lucide-react"
 import type { ExperienceItem } from "@/types"
 
-/* Vertical timeline rendering experience items with map(). */
 export function ExperienceTimeline({ items }: { items: ExperienceItem[] }) {
   return (
     <ol className="relative space-y-8 border-l border-[color:var(--color-pink-1)]/30 pl-6">

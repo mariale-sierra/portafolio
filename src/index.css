@@ -4,48 +4,45 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  /* Core neutrals */
-  --color-background: oklch(0.988 0.01 255);
-  --color-foreground: oklch(0.21 0.03 256);
+  /* Core neutrals (rosado) */
+  --color-background: oklch(0.995 0.005 355);
+  --color-foreground: oklch(0.18 0.03 345);
 
-  --color-card: oklch(0.995 0.006 250);
-  --color-card-foreground: oklch(0.21 0.03 256);
+  --color-card: oklch(0.998 0.003 355);
+  --color-card-foreground: oklch(0.18 0.03 345);
 
-  --color-popover: oklch(1 0 0);
-  --color-popover-foreground: oklch(0.21 0.03 256);
+  --color-popover: oklch(0.995 0.01 355);
+  --color-popover-foreground: oklch(0.18 0.03 345);
 
-  /* Navy primary */
-  --color-primary: oklch(0.34 0.08 257);
-  --color-primary-foreground: oklch(0.99 0.003 247);
+  /* Palette: all pinks */
+  --color-primary: oklch(0.72 0.20 350);
+  --color-primary-foreground: oklch(0.99 0.003 355);
 
-  /* Light gray secondary */
-  --color-secondary: oklch(0.965 0.01 248);
-  --color-secondary-foreground: oklch(0.32 0.07 257);
+  --color-secondary: oklch(0.88 0.08 355);
+  --color-secondary-foreground: oklch(0.22 0.03 345);
 
-  --color-muted: oklch(0.97 0.006 248);
-  --color-muted-foreground: oklch(0.55 0.02 257);
+  --color-muted: oklch(0.985 0.01 355);
+  --color-muted-foreground: oklch(0.5 0.02 350);
 
-  /* Pink accent */
-  --color-accent: oklch(0.74 0.16 355);
-  --color-accent-foreground: oklch(0.21 0.03 256);
-  --color-pink-1: oklch(0.82 0.18 355);
-  --color-pink-2: oklch(0.65 0.18 350);
+  --color-accent: oklch(0.78 0.22 355);
+  --color-accent-foreground: oklch(0.12 0.02 345);
+  --color-pink-1: oklch(0.82 0.22 355);
+  --color-pink-2: oklch(0.68 0.18 350);
 
-  --color-destructive: oklch(0.58 0.21 27);
-  --color-destructive-foreground: oklch(0.99 0.003 247);
+  --color-destructive: oklch(0.62 0.22 25);
+  --color-destructive-foreground: oklch(0.99 0.003 355);
 
-  --color-success: oklch(0.65 0.15 155);
+  --color-success: oklch(0.65 0.15 150);
   --color-warning: oklch(0.78 0.14 75);
 
-  --color-border: oklch(0.9 0.015 250);
-  --color-input: oklch(0.9 0.015 250);
-  --color-ring: oklch(0.74 0.16 355);
+  --color-border: oklch(0.99 0.008 355);
+  --color-input: oklch(0.99 0.008 355);
+  --color-ring: var(--color-accent);
 
-  /* Chart palette: navy, pink, teal, purple, blue */
-  --color-chart-1: oklch(0.32 0.08 257);
+  --color-chart-1: var(--color-primary);
   --color-chart-2: var(--color-pink-1);
-  --color-chart-3: oklch(0.7 0.11 195);
-  --color-chart-4: oklch(0.58 0.09 285);
+  --color-chart-3: oklch(0.7 0.12 320);
+  --color-chart-4: oklch(0.7 0.1 290);
   --color-chart-5: var(--color-pink-2);
 
   --radius-lg: 0.625rem;
@@ -58,7 +55,6 @@
     border-color: var(--color-border);
   }
   body {
-    /* flatter background to feel less corporate */
     background: linear-gradient(180deg, oklch(0.995 0.006 250), oklch(0.99 0.006 250));
     color: var(--color-foreground);
     -webkit-font-smoothing: antialiased;
@@ -68,7 +64,6 @@
   }
 }
 
-/* Subtle dashboard grid background utility (made less rigid) */
 .bg-grid {
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
   background-size: 100% 64px;
@@ -78,9 +73,7 @@
   background: linear-gradient(180deg, rgba(255,245,250,0.6), rgba(255,250,252,0.9));
 }
 
-/* Utility: colorful card */
 .card-vibrant {
-  /* flatter, low-polish surface */
   background: rgba(255,248,250,0.92);
   border: 1px solid rgba(220,180,200,0.06);
 }
@@ -129,4 +122,32 @@
   border-style: dashed;
   border-width: 1px;
   border-color: rgba(244,114,182,0.12);
+}
+
+/* About specific casual styles */
+.about-casual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.about-casual .photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 3px dashed rgba(244,114,182,0.18);
+}
+
+.sticker {
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: rgba(255,240,245,0.9);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(244,114,182,0.08);
+}
+
+@media (min-width: 768px) {
+  .about-casual { grid-template-columns: 220px 1fr; align-items: start; }
 }

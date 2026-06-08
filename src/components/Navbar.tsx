@@ -4,11 +4,11 @@ import { Activity, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const links = [
-  { to: "/", label: "Dashboard", end: true },
-  { to: "/about", label: "About" },
-  { to: "/experience", label: "Experience" },
-  { to: "/projects", label: "Projects" },
-  { to: "/skills", label: "Skills" },
+  { to: "/", label: "Inicio", end: true },
+  { to: "/about", label: "Sobre mí" },
+  { to: "/experience", label: "Experiencia" },
+  { to: "/projects", label: "Proyectos" },
+  { to: "/skills", label: "Habilidades" },
 ]
 
 export function Navbar() {
@@ -23,7 +23,7 @@ export function Navbar() {
           </span>
           <div className="leading-tight">
             <p className="text-sm font-semibold tracking-tight text-foreground">M. A. Sierra</p>
-            <p className="text-[11px] font-medium text-muted-foreground">Backend · Data Analytics</p>
+            <p className="text-[11px] font-medium text-muted-foreground">Backend · Analítica de Datos</p>
           </div>
         </NavLink>
 
